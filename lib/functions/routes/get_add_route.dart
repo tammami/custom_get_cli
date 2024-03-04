@@ -41,7 +41,7 @@ void addRoute(String nameRoute, String bindingDir, String viewDir) {
   }
   var route = pathSplit.join('/');
 
-  var declareRoute = 'static const ${nameRoute.snakeCase.toUpperCase()} =';
+  var declareRoute = 'static const ${nameRoute.lowerCamelCase} =';
   var line = "$declareRoute '/$route';";
   if (supportChildrenRoutes) {
     line = '$declareRoute ${_pathsToRoute(pathSplit)};';

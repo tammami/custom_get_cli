@@ -61,7 +61,7 @@ String _pathsToRoute(List<String> pathSplit) {
   var sb = StringBuffer();
   for (var e in pathSplit) {
     sb.write('_Paths.');
-    sb.write(e.snakeCase.toUpperCase());
+    sb.write(e.lowerCamelCase);
     if (e != pathSplit.last) {
       sb.write(' + ');
     }
